@@ -260,7 +260,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              {['No credit card required', 'Setup in 5 minutes', 'Works on any device'].map((item) => (
+              {['Setup in 5 minutes', 'Works on any device'].map((item) => (
                 <div key={item} className="flex items-center gap-1.5 text-sm" style={{ color: isDark ? '#8888AA' : '#666680' }}>
                   <CheckCircle2 size={15} className="text-[#00D4AA]" />
                   {item}
