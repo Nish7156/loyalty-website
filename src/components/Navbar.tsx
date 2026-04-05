@@ -53,12 +53,18 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <img
-              src="/logo.png"
-              alt="Loyalty Rewards"
-              className="h-10 w-auto object-contain"
-              style={{ filter: isDark ? 'brightness(1)' : 'brightness(0.92)' }}
-            />
+            <span
+              className="text-2xl font-black tracking-tight"
+              style={{
+                background: 'linear-gradient(135deg, #6C63FF 0%, #A78BFA 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                letterSpacing: '-0.03em',
+              }}
+            >
+              Loyalty
+            </span>
           </motion.a>
 
           {/* Desktop Nav Links */}

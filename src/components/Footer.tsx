@@ -63,11 +63,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <motion.div
-              className="flex items-center mb-4"
-              whileHover={{ scale: 1.02 }}
-            >
-              <img src="/logo.png" alt="Loyalty Rewards" className="h-10 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+            <motion.div className="flex items-center mb-4" whileHover={{ scale: 1.02 }}>
+              <span
+                className="text-2xl font-black tracking-tight"
+                style={{
+                  background: 'linear-gradient(135deg, #6C63FF 0%, #A78BFA 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  letterSpacing: '-0.03em',
+                }}
+              >
+                Loyalty
+              </span>
             </motion.div>
             <p className="text-sm leading-relaxed mb-6 text-[#8888AA] max-w-xs">
               The modern loyalty platform that rewards customers automatically. No plastic cards, no app downloads — just results.
