@@ -1,34 +1,22 @@
 import { motion } from 'framer-motion'
-import { Globe, Link, Code2, ArrowUpRight } from 'lucide-react'
+import { Globe, ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const footerLinks = {
   Product: [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    // { label: 'Pricing', href: '#pricing' },
-    { label: 'Demo', href: '#demo' },
-    { label: 'Changelog', href: '#' },
+    { label: 'Features', href: '#features', external: false },
+    { label: 'How It Works', href: '#how-it-works', external: false },
+    { label: 'Demo', href: '#demo', external: false },
   ],
   Company: [
-    { label: 'About', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Contact', href: '#' },
-    { label: 'Press Kit', href: '#' },
+    { label: 'WebTriggers', href: 'https://www.webtriggers.online', external: true },
+    { label: 'Contact', href: 'mailto:hello@webtriggers.online', external: true },
   ],
   Legal: [
-    { label: 'Terms & Conditions', href: '#' },
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
-    { label: 'GDPR', href: '#' },
+    { label: 'Terms & Conditions', href: '/terms', external: false },
+    { label: 'Privacy Policy', href: '/privacy', external: false },
   ],
 }
-
-const socialLinks = [
-  { icon: Globe, label: 'Website', href: '#', color: '#6C63FF' },
-  { icon: Link, label: 'LinkedIn', href: '#', color: '#0077B5' },
-  { icon: Code2, label: 'GitHub', href: '#', color: '#F0F0FF' },
-]
 
 export default function Footer() {
   const handleNavClick = (href: string) => {
@@ -80,29 +68,23 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-6 text-[#8888AA] max-w-xs">
               The modern loyalty platform that rewards customers automatically. No plastic cards, no app downloads — just results.
             </p>
-            {/* Social links */}
-            <div className="flex gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon
-                return (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200"
-                    style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#8888AA',
-                    }}
-                    whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.10)' }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Icon size={16} />
-                  </motion.a>
-                )
-              })}
-            </div>
+            {/* Website link */}
+            <motion.a
+              href="https://www.webtriggers.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                color: '#8888AA',
+              }}
+              whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.10)' }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="WebTriggers Website"
+            >
+              <Globe size={16} />
+            </motion.a>
           </div>
 
           {/* Link columns */}
@@ -114,20 +96,29 @@ export default function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    {link.href.startsWith('#') ? (
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target={link.href.startsWith('http') ? '_blank' : undefined}
+                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="text-sm text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200 flex items-center gap-1"
+                      >
+                        {link.label}
+                      </a>
+                    ) : link.href.startsWith('#') ? (
                       <button
                         onClick={() => handleNavClick(link.href)}
-                        className="text-sm text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200 text-left flex items-center gap-1 group"
+                        className="text-sm text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200 text-left"
                       >
                         {link.label}
                       </button>
                     ) : (
-                      <a
-                        href={link.href}
-                        className="text-sm text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200 flex items-center gap-1 group"
+                      <Link
+                        to={link.href}
+                        className="text-sm text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     )}
                   </li>
                 ))}
@@ -155,7 +146,7 @@ export default function Footer() {
             href="https://loyalty.webtriggers.online/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex-shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
+            className="relative shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
             style={{ background: 'linear-gradient(135deg, #6C63FF, #8B84FF)' }}
             whileHover={{ scale: 1.04, boxShadow: '0 8px 30px rgba(108,99,255,0.4)' }}
             whileTap={{ scale: 0.97 }}
@@ -171,11 +162,11 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
           <p className="text-xs text-[#8888AA]">
-            © {new Date().getFullYear()} Loyalty Platform. All rights reserved.
+            © {new Date().getFullYear()} <a href="https://www.webtriggers.online" target="_blank" rel="noopener noreferrer" className="hover:text-[#F0F0FF] transition-colors duration-200">WebTriggers</a> · Loyalty Platform. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-xs text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200">Privacy</a>
-            <a href="#" className="text-xs text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200">Terms</a>
+            <Link to="/privacy" className="text-xs text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200">Privacy</Link>
+            <Link to="/terms" className="text-xs text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-200">Terms</Link>
             <div className="flex items-center gap-1.5 text-xs text-[#8888AA]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA] animate-pulse" />
               All systems operational

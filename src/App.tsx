@@ -1,4 +1,5 @@
 import './index.css'
+import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './hooks/ThemeProvider'
 import { useTheme } from './hooks/useTheme'
 import Navbar from './components/Navbar'
@@ -7,11 +8,11 @@ import ProductShowcase from './components/ProductShowcase'
 import Features from './components/Features'
 import InteractiveDemo from './components/InteractiveDemo'
 import WhyLoyalty from './components/WhyLoyalty'
-import Testimonials from './components/Testimonials'
-import Pricing from './components/Pricing'
 import Footer from './components/Footer'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 
-function AppInner() {
+function HomePage() {
   const { isDark } = useTheme()
   return (
     <div
@@ -41,7 +42,11 @@ function AppInner() {
 function App() {
   return (
     <ThemeProvider>
-      <AppInner />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+      </Routes>
     </ThemeProvider>
   )
 }
