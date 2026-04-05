@@ -140,7 +140,7 @@ export default function Footer() {
           </div>
           <div className="relative text-center sm:text-left">
             <h3 className="text-lg font-bold text-white mb-1">Ready to start building loyalty?</h3>
-            <p className="text-sm text-[#8888AA]">Join 500+ businesses already using Loyalty. Setup takes 20 minutes.</p>
+            <p className="text-sm text-[#8888AA]">Join 500+ businesses already using Loyalty. Setup takes 5 minutes.</p>
           </div>
           <motion.a
             href="https://loyalty.webtriggers.online/"

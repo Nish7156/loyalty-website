@@ -9,7 +9,7 @@ const COMPANY = 'WebTriggers'
 const COMPANY_URL = 'https://www.webtriggers.online'
 const PRODUCT = 'Loyalty'
 const PRODUCT_URL = 'https://loyalty.webtriggers.online'
-const CONTACT_EMAIL = 'hello@webtriggers.online'
+const CONTACT_EMAIL = 'webtriggers11@gmail.com'
 
 const sections = [
   {
