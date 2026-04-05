@@ -230,7 +230,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
             >
-              <motion.a
+              {/* <motion.a
                 href="https://loyalty.webtriggers.online/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -243,7 +243,7 @@ export default function Hero() {
                   Start Free Trial
                   <ArrowRight size={18} />
                 </span>
-              </motion.a>
+              </motion.a> */}
               <motion.button
                 onClick={handleDemoClick}
                 className="btn-ghost text-base px-6 py-3.5"
