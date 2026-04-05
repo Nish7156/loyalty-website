@@ -98,7 +98,7 @@ export default function WhyLoyalty() {
   return (
     <section
       className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ background: isDark ? '#0A0A0F' : '#FAFAFA' }}
+      style={{ background: isDark ? '#0A0A0F' : '#F5F5FB' }}
     >
       {/* Background glow */}
       <div

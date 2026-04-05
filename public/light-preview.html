@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { animation-duration: 0s !important; transition-duration: 0s !important; }
+</style>
+<script>
+localStorage.setItem('theme','light');
+</script>
+</head>
+<body>
+<script>
+// After a tiny delay, redirect. The redirect page will inherit localStorage.
+setTimeout(() => { window.location.replace('/'); }, 50);
+</script>
+</body>
+</html>

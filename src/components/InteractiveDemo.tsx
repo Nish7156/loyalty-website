@@ -258,13 +258,14 @@ export default function InteractiveDemo() {
     <section
       id="demo"
       className="relative py-24 lg:py-32 overflow-hidden"
+      style={{ background: isDark ? 'transparent' : '#FFFFFF' }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: isDark
             ? 'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(108, 99, 255, 0.07) 0%, transparent 70%)'
-            : 'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(91, 82, 232, 0.05) 0%, transparent 70%)',
+            : 'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(91, 82, 232, 0.04) 0%, transparent 70%)',
         }}
       />
 
@@ -330,9 +331,9 @@ export default function InteractiveDemo() {
                     style={{
                       background: isActive
                         ? isDark ? 'rgba(22, 22, 31, 0.9)' : '#FFFFFF'
-                        : 'transparent',
-                      border: `1px solid ${isActive ? step.color + '40' : 'transparent'}`,
-                      boxShadow: isActive ? `0 8px 30px ${step.color}15` : 'none',
+                        : isDark ? 'transparent' : 'rgba(0,0,0,0.02)',
+                      border: `1px solid ${isActive ? step.color + '50' : isDark ? 'transparent' : 'rgba(0,0,0,0.06)'}`,
+                      boxShadow: isActive ? (isDark ? `0 8px 30px ${step.color}15` : `0 8px 24px rgba(0,0,0,0.10), 0 2px 8px ${step.color}20`) : 'none',
                     }}
                   >
                     <div

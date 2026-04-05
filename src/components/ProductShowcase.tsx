@@ -37,6 +37,7 @@ export default function ProductShowcase() {
     <section
       id="how-it-works"
       className="relative py-24 lg:py-32 overflow-hidden"
+      style={{ background: isDark ? 'transparent' : '#F8F8FD' }}
     >
       {/* Background subtle glow */}
       <div
@@ -44,7 +45,7 @@ export default function ProductShowcase() {
         style={{
           background: isDark
             ? 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(108, 99, 255, 0.06) 0%, transparent 70%)'
-            : 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(91, 82, 232, 0.04) 0%, transparent 70%)',
+            : 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(91, 82, 232, 0.05) 0%, transparent 70%)',
         }}
       />
 
@@ -162,10 +163,10 @@ export default function ProductShowcase() {
                     className="w-full rounded-2xl p-6 transition-all duration-300 group-hover:translate-y-[-4px]"
                     style={{
                       background: isDark ? '#16161F' : '#FFFFFF',
-                      border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'}`,
+                      border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(108,99,255,0.12)'}`,
                       boxShadow: isDark
                         ? '0 4px 24px rgba(0,0,0,0.3)'
-                        : '0 4px 24px rgba(0,0,0,0.06)',
+                        : '0 8px 32px rgba(108,99,255,0.10), 0 2px 8px rgba(0,0,0,0.06)',
                     }}
                   >
                     <h3

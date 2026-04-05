@@ -148,7 +148,7 @@ export default function Hero() {
         <div
           className="blob-1 absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(108, 99, 255, 0.25) 0%, transparent 70%)',
+            background: isDark ? 'radial-gradient(circle, rgba(108, 99, 255, 0.25) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
             filter: 'blur(60px)',
           }}
         />
@@ -156,7 +156,7 @@ export default function Hero() {
         <div
           className="blob-2 absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%)',
+            background: isDark ? 'radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, transparent 70%)',
             filter: 'blur(60px)',
           }}
         />
@@ -164,7 +164,7 @@ export default function Hero() {
         <div
           className="blob-3 absolute -bottom-20 left-1/3 w-[400px] h-[400px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(0, 212, 170, 0.15) 0%, transparent 70%)',
+            background: isDark ? 'radial-gradient(circle, rgba(0, 212, 170, 0.15) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(0, 212, 170, 0.12) 0%, transparent 70%)',
             filter: 'blur(60px)',
           }}
         />
@@ -300,7 +300,7 @@ export default function Hero() {
       <div
         className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
         style={{
-          background: `linear-gradient(to bottom, transparent, ${isDark ? '#0A0A0F' : '#FAFAFA'})`,
+          background: `linear-gradient(to bottom, transparent, ${isDark ? '#0A0A0F' : '#FFFFFF'})`,
         }}
       />
     </section>

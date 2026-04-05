@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div
       style={{
-        background: isDark ? '#0A0A0F' : '#FAFAFA',
+        background: isDark ? '#0A0A0F' : '#FFFFFF',
         color: isDark ? '#F0F0FF' : '#0A0A1A',
         minHeight: '100vh',
         fontFamily: "'Inter', system-ui, sans-serif",

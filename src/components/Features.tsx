@@ -68,7 +68,7 @@ export default function Features() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: isDark ? '#111118' : '#F4F4F8',
+          background: isDark ? '#111118' : '#EDEEFA',
         }}
       />
       <div
@@ -145,8 +145,9 @@ export default function Features() {
                 style={{
                   background: isDark
                     ? 'rgba(22, 22, 31, 0.8)'
-                    : 'rgba(255, 255, 255, 0.9)',
-                  border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'}`,
+                    : 'rgba(255, 255, 255, 0.95)',
+                  border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(108,99,255,0.12)'}`,
+                  boxShadow: isDark ? 'none' : '0 4px 20px rgba(0,0,0,0.06)',
                   backdropFilter: 'blur(20px)',
                   WebkitBackdropFilter: 'blur(20px)',
                 }}
