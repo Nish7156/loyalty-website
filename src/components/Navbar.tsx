@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sun, Moon, Zap, Menu, X } from 'lucide-react'
+import { Sun, Moon, Menu, X } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1]
@@ -49,18 +49,16 @@ export default function Navbar() {
           {/* Logo */}
           <motion.a
             href="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6C63FF] to-[#FF6B6B] flex items-center justify-center shadow-lg group-hover:shadow-[0_0_20px_rgba(108,99,255,0.5)] transition-shadow duration-300">
-              <Zap size={16} className="text-white fill-white" />
-            </div>
-            <span className="text-xl font-bold tracking-tight">
-              <span className="gradient-text-violet" style={{ WebkitTextFillColor: 'transparent', background: 'linear-gradient(135deg, #6C63FF 0%, #A78BFA 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>
-                Loyalty
-              </span>
-            </span>
+            <img
+              src="/logo.png"
+              alt="Loyalty Rewards"
+              className="h-10 w-auto object-contain"
+              style={{ filter: isDark ? 'brightness(1)' : 'brightness(0.92)' }}
+            />
           </motion.a>
 
           {/* Desktop Nav Links */}

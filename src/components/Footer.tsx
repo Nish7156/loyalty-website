@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Zap, Globe, Link, Code2, ArrowUpRight } from 'lucide-react'
+import { Globe, Link, Code2, ArrowUpRight } from 'lucide-react'
 
 const footerLinks = {
   Product: [
@@ -64,13 +64,10 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <motion.div
-              className="flex items-center gap-2 mb-4"
+              className="flex items-center mb-4"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6C63FF] to-[#FF6B6B] flex items-center justify-center shadow-lg">
-                <Zap size={16} className="text-white fill-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Loyalty</span>
+              <img src="/logo.png" alt="Loyalty Rewards" className="h-10 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
             </motion.div>
             <p className="text-sm leading-relaxed mb-6 text-[#8888AA] max-w-xs">
               The modern loyalty platform that rewards customers automatically. No plastic cards, no app downloads — just results.
