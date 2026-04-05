@@ -31,7 +31,7 @@ function AppInner() {
         <InteractiveDemo />
         <WhyLoyalty />
         <Testimonials />
-        <Pricing />
+        {/* <Pricing /> */}
       </main>
       <Footer />
     </div>
