@@ -30,7 +30,7 @@ function AppInner() {
         <Features />
         <InteractiveDemo />
         <WhyLoyalty />
-        <Testimonials />
+        {/* <Testimonials /> */}
         {/* <Pricing /> */}
       </main>
       <Footer />
