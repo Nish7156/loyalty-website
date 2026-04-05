@@ -81,7 +81,7 @@ function ComparisonRow({
         </AnimatePresence>
 
         <motion.div
-          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 relative z-10"
+          className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 relative z-10"
           style={{ background: 'rgba(255, 107, 107, 0.15)' }}
           animate={hovered === 'traditional' ? { rotate: [0, -8, 8, 0] } : {}}
           transition={{ duration: 0.4 }}
@@ -125,7 +125,7 @@ function ComparisonRow({
         </AnimatePresence>
 
         <motion.div
-          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 relative z-10"
+          className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 relative z-10"
           style={{ background: 'rgba(0, 212, 170, 0.15)' }}
           animate={hovered === 'modern' ? { scale: [1, 1.25, 1] } : {}}
           transition={{ duration: 0.35 }}
@@ -142,8 +142,6 @@ function ComparisonRow({
 
 export default function WhyLoyalty() {
   const { isDark } = useTheme()
-  const [headerHovered, setHeaderHovered] = useState(false)
-
   return (
     <section
       className="relative py-24 lg:py-32 overflow-hidden"
@@ -231,7 +229,7 @@ export default function WhyLoyalty() {
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="w-5 h-5 rounded-full bg-[#FF6B6B]/20 flex items-center justify-center flex-shrink-0"
+              className="w-5 h-5 rounded-full bg-[#FF6B6B]/20 flex items-center justify-center shrink-0"
               whileHover={{ rotate: 90 }}
               transition={{ duration: 0.25 }}
             >
@@ -250,7 +248,7 @@ export default function WhyLoyalty() {
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="w-5 h-5 rounded-full bg-[#00D4AA]/20 flex items-center justify-center flex-shrink-0"
+              className="w-5 h-5 rounded-full bg-[#00D4AA]/20 flex items-center justify-center shrink-0"
               whileHover={{ scale: 1.3 }}
               transition={{ duration: 0.25 }}
             >
