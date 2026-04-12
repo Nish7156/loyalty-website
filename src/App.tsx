@@ -33,6 +33,23 @@ function HomePage() {
         <WhyLoyalty />
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
+        {/* TEST: UPI Payment Button */}
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <a
+            href="upi://pay?pa=Vipulkhanvilkar-1@oksbi&pn=StoreOwner&am=1&cu=INR&tn=POC-Loyalty-Test"
+            style={{
+              display: 'inline-block',
+              padding: '15px 25px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+            }}
+          >
+            Pay ₹1 &amp; Earn Points
+          </a>
+        </div>
       </main>
       <Footer />
     </div>
